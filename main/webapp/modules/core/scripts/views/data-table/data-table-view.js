@@ -1136,6 +1136,7 @@ DataTableView.promptExpressionOnVisibleRows = function(column, title, expression
  * This function takes a function as a parameter and creates a dialog window
  * If the ok button is pressed, the function is executed
  * If the cancel button is pressed instead, the window is dismissed and the function is not executed
+ * @param func - The function to be executed upon accepting the warning dialog
  */
 DataTableView.prototype._createPendingSortWarningDialog = function(func) {
   var frame = $(DOM.loadHTML("core", "scripts/views/data-table/warn-of-pending-sort.html"));
