@@ -468,6 +468,7 @@ DataTableColumnHeaderUI.extendMenu(function(column, columnHeaderUI, menu) {
     {
       id: "core/fill-down",
       label: $.i18n('core-views/fill-down'),
+      // CS427 Issue link: https://github.com/OpenRefine/OpenRefine/issues/3256
       click: function () {
         if (columnHeaderUI._dataTableView._getSortingCriteriaCount() > 0) {
            columnHeaderUI._dataTableView._createPendingSortWarningDialog(doFillDown);
@@ -480,6 +481,7 @@ DataTableColumnHeaderUI.extendMenu(function(column, columnHeaderUI, menu) {
     {
       id: "core/blank-down",
       label: $.i18n('core-views/blank-down'),
+      // CS427 Issue link: https://github.com/OpenRefine/OpenRefine/issues/3256
       click: function () {
         if (columnHeaderUI._dataTableView._getSortingCriteriaCount() > 0) {
            columnHeaderUI._dataTableView._createPendingSortWarningDialog(doBlankDown);

@@ -910,6 +910,7 @@ DataTableView.prototype._createMenuForAllColumns = function(elmt) {
         {
           label: $.i18n('core-views/fill-down'),
           id: "core/fill-down",
+          // CS427 Issue link: https://github.com/OpenRefine/OpenRefine/issues/3256
           click: function () {
             if (self._getSortingCriteriaCount() > 0) {
                 self._createPendingSortWarningDialog(doAllFillDown);
@@ -922,6 +923,7 @@ DataTableView.prototype._createMenuForAllColumns = function(elmt) {
         {
           label: $.i18n('core-views/blank-down'),
           id: "core/blank-down",
+          // CS427 Issue link: https://github.com/OpenRefine/OpenRefine/issues/3256
           click: function () {
             if (self._getSortingCriteriaCount() > 0) {
                 self._createPendingSortWarningDialog(doAllBlankDown);
@@ -1138,6 +1140,7 @@ DataTableView.promptExpressionOnVisibleRows = function(column, title, expression
  * If the cancel button is pressed instead, the window is dismissed and the function is not executed
  * @param func - The function to be executed upon accepting the warning dialog
  */
+// CS427 Issue link: https://github.com/OpenRefine/OpenRefine/issues/3256
 DataTableView.prototype._createPendingSortWarningDialog = function(func) {
   var frame = $(DOM.loadHTML("core", "scripts/views/data-table/warn-of-pending-sort.html"));
   var elmts = DOM.bind(frame);
